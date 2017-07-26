@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1134B841F285742001CDC87 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1134B821F285742001CDC87 /* CarCell.swift */; };
+		D1134B851F285742001CDC87 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1134B831F285742001CDC87 /* CarCell.xib */; };
 		D17858A61F1495C8007F2DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858A51F1495C8007F2DA7 /* AppDelegate.swift */; };
-		D17858A81F1495C8007F2DA7 /* AddNewCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858A71F1495C8007F2DA7 /* AddNewCarVC.swift */; };
+		D17858A81F1495C8007F2DA7 /* AddNewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858A71F1495C8007F2DA7 /* AddNewCarViewController.swift */; };
 		D17858AB1F1495C8007F2DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17858A91F1495C8007F2DA7 /* Main.storyboard */; };
 		D17858AD1F1495C8007F2DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17858AC1F1495C8007F2DA7 /* Assets.xcassets */; };
 		D17858B01F1495C9007F2DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17858AE1F1495C9007F2DA7 /* LaunchScreen.storyboard */; };
-		D17858BE1F14A374007F2DA7 /* CarListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858BD1F14A374007F2DA7 /* CarListVC.swift */; };
-		D17858C01F14A457007F2DA7 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858BF1F14A457007F2DA7 /* CarCell.swift */; };
+		D17858BE1F14A374007F2DA7 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858BD1F14A374007F2DA7 /* CarListViewController.swift */; };
 		D19D127C1F1B545700C05461 /* AddNewCarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17858BB1F14A19D007F2DA7 /* AddNewCarDelegate.swift */; };
 		D19D127F1F1B581200C05461 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D127E1F1B581200C05461 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1134B821F285742001CDC87 /* CarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		D1134B831F285742001CDC87 /* CarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		D17858A21F1495C8007F2DA7 /* CarСatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CarСatalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17858A51F1495C8007F2DA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D17858A71F1495C8007F2DA7 /* AddNewCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarVC.swift; sourceTree = "<group>"; };
+		D17858A71F1495C8007F2DA7 /* AddNewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarViewController.swift; sourceTree = "<group>"; };
 		D17858AA1F1495C8007F2DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D17858AC1F1495C8007F2DA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D17858AF1F1495C9007F2DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D17858B11F1495C9007F2DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "CarСatalog/Info.plist"; sourceTree = "<group>"; };
+		D17858B11F1495C9007F2DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D17858BB1F14A19D007F2DA7 /* AddNewCarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCarDelegate.swift; sourceTree = "<group>"; };
-		D17858BD1F14A374007F2DA7 /* CarListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarListVC.swift; sourceTree = "<group>"; };
-		D17858BF1F14A457007F2DA7 /* CarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		D17858BD1F14A374007F2DA7 /* CarListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		D19D127E1F1B581200C05461 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,11 +45,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1134B7F1F28530D001CDC87 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D19D12801F1B6FA400C05461 /* ViewControllers */,
+				D19D12811F1B70CD00C05461 /* ApplicationDelegate */,
+				D19D12861F1B725700C05461 /* Protocols */,
+				D19D12871F1B728200C05461 /* Views */,
+				D19D12881F1B728C00C05461 /* Classes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D1134B811F285350001CDC87 /* SuppotingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D17858B11F1495C9007F2DA7 /* Info.plist */,
+			);
+			path = SuppotingFiles;
+			sourceTree = "<group>";
+		};
+		D1134B861F28B6F1001CDC87 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D1134B821F285742001CDC87 /* CarCell.swift */,
+				D1134B831F285742001CDC87 /* CarCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D17858991F1495C8007F2DA7 = {
 			isa = PBXGroup;
 			children = (
 				D17858A41F1495C8007F2DA7 /* CarСatalog */,
-				D17858B11F1495C9007F2DA7 /* Info.plist */,
 				D17858A31F1495C8007F2DA7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,37 +93,34 @@
 		D17858A41F1495C8007F2DA7 /* CarСatalog */ = {
 			isa = PBXGroup;
 			children = (
-				D19D12881F1B728C00C05461 /* Classes */,
-				D19D12871F1B728200C05461 /* Views */,
-				D19D12861F1B725700C05461 /* Protocols */,
-				D19D12841F1B715300C05461 /* Storyboards */,
+				D1134B7F1F28530D001CDC87 /* Sources */,
 				D19D12831F1B711E00C05461 /* Resources */,
-				D19D12811F1B70CD00C05461 /* Application Delegate */,
-				D19D12801F1B6FA400C05461 /* View Controllers */,
+				D1134B811F285350001CDC87 /* SuppotingFiles */,
 			);
 			path = "CarСatalog";
 			sourceTree = "<group>";
 		};
-		D19D12801F1B6FA400C05461 /* View Controllers */ = {
+		D19D12801F1B6FA400C05461 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D17858A71F1495C8007F2DA7 /* AddNewCarVC.swift */,
-				D17858BD1F14A374007F2DA7 /* CarListVC.swift */,
+				D17858A71F1495C8007F2DA7 /* AddNewCarViewController.swift */,
+				D17858BD1F14A374007F2DA7 /* CarListViewController.swift */,
 			);
-			path = "View Controllers";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		D19D12811F1B70CD00C05461 /* Application Delegate */ = {
+		D19D12811F1B70CD00C05461 /* ApplicationDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				D17858A51F1495C8007F2DA7 /* AppDelegate.swift */,
 			);
-			path = "Application Delegate";
+			path = ApplicationDelegate;
 			sourceTree = "<group>";
 		};
 		D19D12831F1B711E00C05461 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D19D12841F1B715300C05461 /* Storyboards */,
 				D17858AC1F1495C8007F2DA7 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -119,7 +146,7 @@
 		D19D12871F1B728200C05461 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D17858BF1F14A457007F2DA7 /* CarCell.swift */,
+				D1134B861F28B6F1001CDC87 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1134B851F285742001CDC87 /* CarCell.xib in Resources */,
 				D17858B01F1495C9007F2DA7 /* LaunchScreen.storyboard in Resources */,
 				D17858AD1F1495C8007F2DA7 /* Assets.xcassets in Resources */,
 				D17858AB1F1495C8007F2DA7 /* Main.storyboard in Resources */,
@@ -206,10 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19D127C1F1B545700C05461 /* AddNewCarDelegate.swift in Sources */,
-				D17858C01F14A457007F2DA7 /* CarCell.swift in Sources */,
+				D1134B841F285742001CDC87 /* CarCell.swift in Sources */,
 				D19D127F1F1B581200C05461 /* Car.swift in Sources */,
-				D17858A81F1495C8007F2DA7 /* AddNewCarVC.swift in Sources */,
-				D17858BE1F14A374007F2DA7 /* CarListVC.swift in Sources */,
+				D17858A81F1495C8007F2DA7 /* AddNewCarViewController.swift in Sources */,
+				D17858BE1F14A374007F2DA7 /* CarListViewController.swift in Sources */,
 				D17858A61F1495C8007F2DA7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,9 +363,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 39Z4HLUZUT;
-				INFOPLIST_FILE = "CarСatalog/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CarСatalog/SuppotingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Y.S.Car--atalog";
+				PRODUCT_BUNDLE_IDENTIFIER = Y.S.CarCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -350,9 +378,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 39Z4HLUZUT;
-				INFOPLIST_FILE = "CarСatalog/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CarСatalog/SuppotingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Y.S.Car--atalog";
+				PRODUCT_BUNDLE_IDENTIFIER = Y.S.CarCatalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

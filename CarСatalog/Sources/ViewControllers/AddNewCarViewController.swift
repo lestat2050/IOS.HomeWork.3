@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewCarVC: UIViewController {
+class AddNewCarViewController: UIViewController {
 
     @IBOutlet private(set) weak var brandTextField: UITextField!
     @IBOutlet private(set) weak var modelTextField: UITextField!
@@ -19,37 +19,42 @@ class AddNewCarVC: UIViewController {
     }
     
     weak var delegate: AddNewCarDelegate?
-    var carForEdit: Car?
+    weak var carForEdit: Car?
     
-    private let datePicker = UIDatePicker()
-    /*do not work datePickerChanged
-    var datePicker: UIDatePicker {
+    private(set) lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
+        datePicker.addTarget(self,
+                             action: #selector(AddNewCarViewController.datePickerChanged),
+                             for: .valueChanged)
         return datePicker
-    }
-    */
+    }()
     
-    private var dateFormat: DateFormatter {
+    private(set) lazy var dateFormat: DateFormatter = {
         let dateFormat = DateFormatter()
         dateFormat.dateStyle = .medium
         return dateFormat
-    }
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        datePicker.datePickerMode = .date
-        
+        loadCarForEdit()
+    }
+    
+    private func loadCarForEdit() {
         if let carForEdit = carForEdit {
             brandTextField.text = carForEdit.brand
             modelTextField.text = carForEdit.model
             releaseDateTextField.text = dateFormat.string(from: carForEdit.releaseDate)
         }
     }
+    
+    func datePickerChanged(sender: UIDatePicker) {
+        releaseDateTextField.text = dateFormat.string(from: sender.date)
+    }
 
     @IBAction func onTouchSaveData(_ sender: UIButton) {
-
         guard let brand = brandTextField.text, !brand.isEmpty else {
             showAlert(with: "Fill brand")
             return
@@ -69,11 +74,12 @@ class AddNewCarVC: UIViewController {
             carForEdit.brand = brand
             carForEdit.model = model
             carForEdit.releaseDate = releaseDate
-            delegate?.refreshCarList()
+            delegate?.refreshList()
         } else {
             let car = Car(brand: brand, model: model, releaseDate: releaseDate)
             delegate?.onCreatedNew(car: car)
         }
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -81,24 +87,18 @@ class AddNewCarVC: UIViewController {
         self.view.endEditing(true)
     }
     
-    private func showAlert(with title: String) {
-        let alert = UIAlertController(title: "Error", message: title, preferredStyle: .alert)
+}
+
+extension UIViewController {
+
+    func showAlert(with title: String) {
+        let alert = UIAlertController(title: "Error", message: title,
+                                      preferredStyle: .alert)
         let actionOk = UIAlertAction(title: "OK", style: .default)
         alert.addAction(actionOk)
         present(alert, animated: true, completion: nil)
     }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        datePicker.addTarget(self, action: #selector(AddNewCarVC.datePickerChanged), for: .valueChanged)
-    }
-    
-    func datePickerChanged(sender: UIDatePicker) {
-        releaseDateTextField.text = dateFormat.string(from: sender.date)
-    }
-    
-}
-
-extension AddNewCarVC: UITextFieldDelegate {
 
 }
+
 
