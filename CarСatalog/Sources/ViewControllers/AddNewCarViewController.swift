@@ -101,7 +101,7 @@ class AddNewCarViewController: UIViewController {
 extension UIViewController {
 
     func showAlert(with title: String) {
-        let alert = UIAlertController(title: "Error", message: title,
+        let alert = UIAlertController(title: "Missing data", message: title,
                                       preferredStyle: .alert)
         let actionOk = UIAlertAction(title: "OK", style: .default)
         alert.addAction(actionOk)
