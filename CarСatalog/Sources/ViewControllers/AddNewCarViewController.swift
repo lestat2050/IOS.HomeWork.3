@@ -15,6 +15,9 @@ class AddNewCarViewController: UIViewController {
     @IBOutlet private(set) weak var releaseDateTextField: UITextField! {
         didSet {
             releaseDateTextField.inputView = datePicker
+            releaseDateTextField.addTarget(self,
+                                           action: #selector(self.releaseDateEditingDidBegin),
+                                           for: UIControlEvents.editingDidBegin)
         }
     }
     
@@ -25,7 +28,7 @@ class AddNewCarViewController: UIViewController {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.addTarget(self,
-                             action: #selector(AddNewCarViewController.datePickerChanged),
+                             action: #selector(self.datePickerChanged),
                              for: .valueChanged)
         return datePicker
     }()
@@ -47,6 +50,12 @@ class AddNewCarViewController: UIViewController {
             brandTextField.text = carForEdit.brand
             modelTextField.text = carForEdit.model
             releaseDateTextField.text = dateFormat.string(from: carForEdit.releaseDate)
+        }
+    }
+    
+    func releaseDateEditingDidBegin(sender: UITextField) {
+        if sender.text!.isEmpty {
+            releaseDateTextField.text = dateFormat.string(from: datePicker.date)
         }
     }
     

@@ -49,10 +49,10 @@
 			isa = PBXGroup;
 			children = (
 				D19D12801F1B6FA400C05461 /* ViewControllers */,
-				D19D12811F1B70CD00C05461 /* ApplicationDelegate */,
+				D1134B861F28B6F1001CDC87 /* Cells */,
+				D19D12881F1B728C00C05461 /* VO */,
 				D19D12861F1B725700C05461 /* Protocols */,
-				D19D12871F1B728200C05461 /* Views */,
-				D19D12881F1B728C00C05461 /* Classes */,
+				D19D12811F1B70CD00C05461 /* AppDelegate */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -109,12 +109,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		D19D12811F1B70CD00C05461 /* ApplicationDelegate */ = {
+		D19D12811F1B70CD00C05461 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				D17858A51F1495C8007F2DA7 /* AppDelegate.swift */,
 			);
-			path = ApplicationDelegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		D19D12831F1B711E00C05461 /* Resources */ = {
@@ -143,20 +143,12 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D19D12871F1B728200C05461 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D1134B861F28B6F1001CDC87 /* Cells */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D19D12881F1B728C00C05461 /* Classes */ = {
+		D19D12881F1B728C00C05461 /* VO */ = {
 			isa = PBXGroup;
 			children = (
 				D19D127E1F1B581200C05461 /* Car.swift */,
 			);
-			path = Classes;
+			path = VO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -18,18 +18,3 @@ class CarCell: UITableViewCell {
     
 }
 
-class CarCellConfigurator {
-    
-    private(set) lazy var dateFormat: DateFormatter = {
-        let dateFormat = DateFormatter()
-        dateFormat.dateStyle = .medium
-        return dateFormat
-    }()
-    
-    init(view: CarCell, model: Car) {
-        view.brandLabel.text = model.brand
-        view.modelLabel.text = model.model
-        view.releaseDateLabel.text = dateFormat.string(from: model.releaseDate)
-    }
-    
-}

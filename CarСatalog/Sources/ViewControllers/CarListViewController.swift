@@ -12,13 +12,12 @@ class CarListViewController: UIViewController {
 
     @IBOutlet private(set) weak var carListTableView: UITableView! {
         didSet {
-            carListTableView.dataSource = self
-            carListTableView.delegate = self
+            configurateTableView()
         }
     }
     
     static let addNewCarSegueID = "addNewCarSegueID"
-    var carList: [Car] = []
+    var carListDataSource: [Car] = []
     
     private(set) lazy var dateFormat: DateFormatter = {
         let dateFormat = DateFormatter()
@@ -29,11 +28,12 @@ class CarListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        registerCells()
         addSampleList()
     }
     
-    private func registerCells() {
+    private func configurateTableView() {
+        carListTableView.dataSource = self
+        carListTableView.delegate = self
         carListTableView.register(UINib(nibName: CarCell.identifier, bundle: nil),
                                   forCellReuseIdentifier: CarCell.identifier)
     }
@@ -55,7 +55,7 @@ class CarListViewController: UIViewController {
         
         for element in defaultData {
             dateFormat.date(from: element.date).flatMap {
-                carList.append(Car(brand: element.brand,
+                carListDataSource.append(Car(brand: element.brand,
                                    model: element.model,
                                    releaseDate: $0))
             }
@@ -71,7 +71,7 @@ class CarListViewController: UIViewController {
         let nextViewController = segue.destination as! AddNewCarViewController
         nextViewController.delegate = self
         if let indexPath = carListTableView.indexPathForSelectedRow {
-            nextViewController.carForEdit = carList[indexPath.row]
+            nextViewController.carForEdit = carListDataSource[indexPath.row]
         }
     }
     
@@ -86,7 +86,7 @@ class CarListViewController: UIViewController {
 extension CarListViewController: AddNewCarDelegate {
     
     func onCreatedNew(car: Car) {
-        carList.append(car)
+        carListDataSource.append(car)
         refreshList()
     }
     
@@ -101,15 +101,18 @@ extension CarListViewController: UITableViewDataSource { }
 extension CarListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carList.count
+        return carListDataSource.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CarCell.identifier,
                                                  for: indexPath) as! CarCell
-        let car = carList[indexPath.row]
-        let _ = CarCellConfigurator(view: cell, model: car)
+        let car = carListDataSource[indexPath.row]
+        
+        cell.brandLabel.text = car.brand
+        cell.modelLabel.text = car.model
+        cell.releaseDateLabel.text = dateFormat.string(from: car.releaseDate)
         
         return cell
     }
